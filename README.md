@@ -1,3 +1,3 @@
 # Angular5-Material-Bootstrap
-Sample application to check how Angular5 works with Material Design in Bootstrap.
+Sample Responsive Application using Angular 5, Typescript and Material Design in Bootstrap. 
 
