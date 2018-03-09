@@ -1,0 +1,63 @@
+<section class="section team-section pb-3">
+    <!--Grid row-->
+    
+    <img src="{{teamPic}}" width="100%" height="20px" class="img-fluid d-block w-100" alt="Responsive image">
+              
+    <div class="row text-center">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-r"  *ngFor="let profile of profiles" (click)="onSelect(profile.id)">
+            <div class="avatar">
+                <img src={{profile.image}} class="rounded-circle z-depth-1" height="60%" width="60%" alt="First sample avatar image">
+            </div>
+            <h4>{{profile.name}}</h4>
+            <!--Facebook-->
+            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+            <!--Twitter-->
+            <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+            <!--Instagram-->
+            <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+        </div>
+        <!--Grid column-->
+    </div>
+    <!--Grid row-->
+</section>
+<!--Section: Team v.1-->  
+<!--Section: Features v.3-->
+<section class="section feature-box" *ngIf="selectedProfile">
+    <!--Section heading-->
+    <h1 class="section-heading pt-4">Profile of {{selectedProfile.name}}</h1>  
+    <!--Grid row-->
+    <div class="row features-small pt-2">
+        <!--Grid column-->
+        <div class="col-lg-5 mb-r center-on-small-only">
+            <img src="{{selectedProfile.image}}" alt="" class="img-fluid z-depth-0">
+        </div>
+        <!--Grid column-->
+        <div class="col-lg-7">
+            <!--Grid row-->
+            <div class="row pb-3">
+                <div class="col-2 col-md-1">
+                    <i class="fa fa-bank blue-text"></i>
+                </div>
+                <div class="col-10">
+                    <h5 class="feature-title">Title</h5>
+                    <p class="grey-text">{{selectedProfile.title}}</p>
+                </div>
+            </div>
+            <!--Grid row-->
+            <div class="row pb-3">
+                <div class="col-2 col-md-1">
+                    <i class="fa fa-code blue-text"></i>
+                </div>
+                <div class="col-10">
+                    <h5 class="feature-title">Summary</h5>
+                    <p class="grey-text">{{selectedProfile.summary}}</p>
+                </div>
+            </div>
+            <!--Grid row-->
+        </div>
+        <!--Grid column-->
+    </div>
+    <!--Grid row-->
+</section>  
+    

@@ -1,0 +1,104 @@
+<section class="section team-section pb-3">
+  <!--Grid row-->
+
+  <div class="row">
+
+    <div class="col-lg-4 col-md-4 mb-r  text-center"  style="margin-top: 95px">
+     
+      <div *ngFor="let profile of profiles" (click)="onSelect(profile.id)">
+        <div class="avatar" style="margin-top: 25px">
+          <img src={{profile.image}} class="rounded-circle z-depth-1" height="20%" width="20%" alt="First sample avatar image">
+        </div>
+        <h4>{{profile.name}}</h4>
+        <!--Facebook-->
+        <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+        <!--Twitter-->
+        <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+        <!--Instagram-->
+        <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 mb-r">
+      <section class="section feature-box" *ngIf="selectedProfile">
+        <!--Section heading-->
+        <h1 class="section-heading pt-4">{{selectedProfile.name}}</h1>
+        <!--Grid row-->
+        <div class="row features-large pt-2">
+          <!--Grid column-->
+          <div class="col-lg-5 mb-r center-on-small-only">
+            <img src="{{selectedProfile.image}}" alt="" class="img-fluid z-depth-0">
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-7">
+            <!--Grid row-->
+             <div class="row pb-3">
+              <div class="col-2 col-md-1">
+                <i class="fa fa-address-card-o blue-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Personal Details</h5>
+                <p>
+                    <span style="color: deeppink; font-weight: bold">Born: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.born}}</span>
+                </p>
+                <p>
+                    <span style="color: deeppink; font-weight: bold">Place of Birth: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.birthPlace}}</span>
+                </p>
+                <p>
+                    <span style="color: deeppink; font-weight: bold">Nationality: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.nationality}}</span>
+                </p>
+                <p>
+                    <span style="color: deeppink; font-weight: bold">Height: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.height}}</span>
+                </p>
+                <p>
+                    <span style="color: deeppink; font-weight: bold">Weight: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.weight}}</span>
+                </p>
+                 <p>
+                    <span style="color: deeppink; font-weight: bold">Foot: </span>
+                    <span style="color: darkblue; font-weight: bold">{{selectedProfile.foot}}</span>
+                </p>
+              </div>
+            </div>
+             <!--Grid row-->
+            
+            
+          </div>
+          <!--Grid column-->
+        </div>
+        <div class="row pb-3">
+              <div class="col-2 col-md-1">
+                <i class="fa fa-address-card-o blue-text"></i>
+              </div>
+              <div class="col-10">
+                <h5 class="feature-title">Career Details</h5>
+                <p class="darkpink-text">
+                    <span style="color: deeppink; font-weight: bold">Summary: </span>
+                    <span style="color: darkblue; font-weight: bold">
+                      {{selectedProfile.name}} plays for {{selectedProfile.currentTeam}} of country 
+                      <img src="{{selectedProfile.iconCurrentCountry}}" alt="" class="img-fluid z-depth-0">
+                      {{selectedProfile.playingCountry}}.
+                      He is playing for the club as a  {{selectedProfile.currentPosition}} since {{selectedProfile.career}}.
+                      He is orignially from location 
+                      <img src="{{selectedProfile.iconCountry}}" alt="" class="img-fluid z-depth-0">
+                      {{selectedProfile.birthPlace}}. He feels proud to wear a jersey of # {{selectedProfile.jerseyNumber}} 
+                      for club {{selectedProfile.currentTeam}}.</span>
+                </p>
+   
+              </div>
+            </div>
+        <!--Grid row-->
+      </section>
+    </div>
+  </div>
+  <!--Grid column-->
+
+  <!--Grid column-->
+
+  <!--Grid row-->
+</section>
+<!--Section: Team v.1-->
+<!--Section: Features v.3-->
